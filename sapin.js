@@ -25,12 +25,29 @@ function afficherRectangle(hauteur, largeur) {
 // afficherRectangle(5,5);
 
 function afficherTriangleDroite(n) {
-    console.log(" \\");
-    let j = 0;
+    let j = -1;
     for (let i = 0; i < n-1; i++) {
         j++
         console.log(afficherEtoiles(j), "\\");
     }
 }
 
-afficherTriangleDroite(5);
+// afficherTriangleDroite(5);
+
+function afficherTriangleGauche(n) {
+    let j = -1;
+    for (let i = 0; i < n; i++) {
+        j++
+        let etage = afficherEtoiles(j);
+        let espace = " ";
+
+        if (j === -1) {
+            console.log(espace.repeat(n), "/");
+        } else if (j > -1) {
+            let k = n - j
+            console.log(espace.repeat(k), "/",etage,);
+        }
+    }
+}
+
+afficherTriangleGauche(5);
