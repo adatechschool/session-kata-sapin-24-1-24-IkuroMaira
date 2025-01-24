@@ -22,4 +22,15 @@ function afficherRectangle(hauteur, largeur) {
     }
 }
 
-afficherRectangle(5,5);
+// afficherRectangle(5,5);
+
+function afficherTriangleDroite(n) {
+    console.log(" \\");
+    let j = 0;
+    for (let i = 0; i < n-1; i++) {
+        j++
+        console.log(afficherEtoiles(j), "\\");
+    }
+}
+
+afficherTriangleDroite(5);
